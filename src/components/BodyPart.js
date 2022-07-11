@@ -5,7 +5,7 @@ import Icon from '../assets/icons/gym.png'
 const BodyPart = ({ item, setBodyPart, bodyPart }) => {
   return (
     <Stack type="button" alignItems="center" justifyContent="center" className="bodyPart-card" sx={{ 
-        borderTop: bodyPart === item ? '4px solid #FF2625' : '', backgroundColor: '#FFF', 
+        borderTop: bodyPart === item ? '4px solid #0779E4' : '', backgroundColor: '#BADFDB', 
         borderBottomLeftRadius: '20px', width: '270px', height: '280px', cursor: 'pointer', gap: '47px' }} 
         onClick={() => { 
             setBodyPart(item)
