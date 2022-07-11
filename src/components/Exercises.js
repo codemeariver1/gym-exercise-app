@@ -7,8 +7,8 @@ import ExerciseCard from './ExerciseCard'
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
     const [currentPage, setCurrentPage] = useState(1)
     const exercisesPerPage = 9
-    const indexOfLastExercise = currentPage * exercisesPerPage
-    const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage
+    const indexOfLastExercise = currentPage * exercisesPerPage - 1 // 0-indexed
+    const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage + 1 // 0-indexed
     const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise)
 
     const paginate = (e, value ) => {
@@ -33,7 +33,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         }
 
         fetchExercisesData()
-    }, [bodyPart])
+    }, [bodyPart, setExercises])
     
 
     return (

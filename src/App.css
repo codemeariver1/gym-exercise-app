@@ -45,6 +45,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    padding-right: 3%;
 }
   
 .detail-image {
